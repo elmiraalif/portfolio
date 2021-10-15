@@ -1,0 +1,56 @@
+[31-May-2020 02:05:16 UTC] PHP Warning:  require_once(Models/logregModels/Account.php): failed to open stream: No such file or directory in /home/xk7n9i9spnzn/elmiraalif.com/soundly/index.php on line 6
+[31-May-2020 02:05:16 UTC] PHP Fatal error:  require_once(): Failed opening required 'Models/logregModels/Account.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/xk7n9i9spnzn/elmiraalif.com/soundly/index.php on line 6
+[31-May-2020 02:05:18 UTC] PHP Warning:  require_once(Models/logregModels/Account.php): failed to open stream: No such file or directory in /home/xk7n9i9spnzn/elmiraalif.com/soundly/index.php on line 6
+[31-May-2020 02:05:18 UTC] PHP Fatal error:  require_once(): Failed opening required 'Models/logregModels/Account.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/xk7n9i9spnzn/elmiraalif.com/soundly/index.php on line 6
+[31-May-2020 02:26:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:26:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:46:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:46:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:50:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:50:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:56:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[31-May-2020 02:56:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soundly.playlists' doesn't exist in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php:7
+Stack trace:
+#0 /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php(7): PDOStatement->execute()
+#1 /home/xk7n9i9spnzn/elmiraalif.com/soundly/playlists.php(18): Playlist->listPlaylists(Object(PDO))
+#2 {main}
+  thrown in /home/xk7n9i9spnzn/elmiraalif.com/soundly/Models/Playlist.php on line 7
+[17-Jun-2020 16:44:24 UTC] PHP Notice:  Undefined index: id in /home/xk7n9i9spnzn/elmiraalif.com/soundly/main.php on line 10
+[17-Jun-2020 16:44:24 UTC] PHP Notice:  Undefined index: id in /home/xk7n9i9spnzn/elmiraalif.com/soundly/main.php on line 12
+[17-Jun-2020 16:44:24 UTC] PHP Notice:  Trying to get property 'first_name' of non-object in /home/xk7n9i9spnzn/elmiraalif.com/soundly/main.php on line 32
+[17-Jun-2020 16:44:24 UTC] PHP Notice:  Trying to get property 'last_name' of non-object in /home/xk7n9i9spnzn/elmiraalif.com/soundly/main.php on line 32

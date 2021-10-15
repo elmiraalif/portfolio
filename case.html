@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodel | Case Study</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png" />
+    <link rel="manifest" href="public/images/site.webmanifest" />
+    <link rel="stylesheet" href="public/css/style.min.css" />
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="overlay-menu">
+        <div>
+          <div>
+            <ul>
+              <li class="nav-item"><a href="/">About</a></li>
+              <li class="nav-item"><a href="./#projects">Skills</a></li>
+              <li class="nav-item"><a href="/projects">Projects</a></li>
+              <li class="nav-item"><a href="./#contact">Contact</a></li>
+              <li><button class="btn-cv" type="submit" onclick="window.open('public/images/resume.pdf')">My Resume</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="logo">
+        <a href="/"><img src="public/images/Logo.svg" alt="Logo" /></a>
+      </div>
+      <nav class="menu">
+        <ul class="menu-nav">
+          <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./#projects">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="./#contact">Contact</a></li>
+          <li class="nav-item"><button class="btn-cv" type="submit" onclick="window.open('public/images/resume.pdf')">My Resume</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-case" class="bg-mobile">
+      <h1>Foodel, Case Study</h1>
+      <section class="panel">
+        <div class="pic">
+          <img src="public/images/noodles.svg" alt="" />
+        </div>
+        <div class="desc">
+          <div class="right">
+            <p>
+              "It's been a while that I don't know what to cook for lunch. I'm always eating the same food over and over again, Noodles! I wish I had
+              someone telling me what to cook and eat today."
+            </p>
+            <p>
+              This was what I kept telling myself every single day. Sometimes I went to find exciting recipes on Instagram, but I was looking for a
+              more structured and organized plan.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="desc">
+          <div class="left">
+            <p>
+              I had a course in school called XML, which was all about how to trigger APIs and authentications. Students were supposed to work on an
+              API project for the final assignment.
+            </p>
+            <p>
+              At the time, I was figuring out to decide on the most practical app among tons of API sources. This idea came to my mind to make a
+              weekly recipe plan to make my daily routine of cooking and eating much easier.
+            </p>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="public/images/xml.svg" alt="" />
+        </div>
+      </section>
+      <section class="panel">
+        <div class="pic">
+          <img src="public/images/bmi.svg" alt="" />
+        </div>
+        <div class="desc">
+          <div class="right">
+            <p>
+              I made up my mind to build this application using Node.js as the backend technology. Next, I started to write down the features that
+              could possibly be useful, and then I realized that I should add a functional feature to make it even more special.
+            </p>
+            <p>
+              Adding a BMI Calculator as an extra step to reach the weekly recipes was a good idea to make it even more personalized.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <h2>Thought Process</h2>
+        <div class="step">
+          <div>
+            <img src="public/images/one.svg" alt="" />
+          </div>
+          <p>This application needs a name related to food.</p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/two.svg" alt="" />
+          </div>
+          <p>
+            A minimal Logo is essential for this app. For the color, I should go with a green tone to bring the feeling of being fresh and healthy.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/three.svg" alt="" />
+          </div>
+          <p>
+            Register/Login feature for the user to have access to their own dashboard to add more features to the application later on.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/four.svg" alt="" />
+          </div>
+          <p>
+            The Login/ Registration can be either through emails and passwords or Google accounts.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/five.svg" alt="" />
+          </div>
+          <p>
+            Once the data is fetched from the API source, making a BMI calculator function is essential, based on the inputs that users have entered
+            through a form on the dashboard.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/six.svg" alt="" />
+          </div>
+          <p>
+            The recipes available on the Spoonacular API have a "Search Recipes Complex" endpoint for much more flexibility. I should narrow down the
+            results by limiting the number of calories that an individual can take every day.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/seven.svg" alt="" />
+          </div>
+          <p>
+            Doing some research is required to get the daily calorie intakes based on BMI. The result should be filtered and be inside the range
+            defined for males or females.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/eight.svg" alt="" />
+          </div>
+          <p>
+            The result should be filtered and be inside the range defined for males or females. It should display the results as one meal a day for 7
+            days.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/nine.svg" alt="" />
+          </div>
+          <p>
+            I got to create a mockup file using Adobe XD for the design of the pages. I would do it as simple as possible.
+          </p>
+        </div>
+        <div class="step">
+          <div>
+            <img src="public/images/ten.svg" alt="" />
+          </div>
+          <p>
+            Now, I start coding and developing the project!
+          </p>
+        </div>
+        <div class="buttons">
+          <a href="https://agile-atoll-78055.herokuapp.com/" class="btn-view">Wanna See the Project?</a>
+          <a href="https://github.com/elmiraalif/foodel_recipe_planner.git" class="btn-view-fill">Wanna See the Code?</a>
+        </div>
+        <div class="mockup">
+          <img src="public/images/foodel.png" alt="" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

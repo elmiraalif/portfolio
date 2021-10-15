@@ -1,0 +1,488 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #f1f3f6;
+  font-family: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #261738;
+}
+
+h2 {
+  font-size: 2.6em;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+#header {
+  position: absolute;
+  top: 2em;
+  left: 10em;
+}
+
+#main-menu li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 2em;
+  font-size: 1.2em;
+  padding-bottom: 7px;
+}
+
+#main-menu li:hover {
+  border-bottom: 4px solid #4f3c75;
+}
+
+/* Styles for the mobile device */
+#main {
+  height: 93vh;
+  width: 98vw;
+}
+
+#footer {
+  padding-left: 100px;
+  color: #4f3c7587;
+}
+
+.mobile {
+  width: 30vw;
+  height: 90vh;
+  float: right;
+  padding: 3vh 10vw;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+.outer-rectangle {
+  width: 380px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 50px;
+  float: right;
+  margin: 2% 8%;
+  position: relative;
+  box-shadow: 80px 60px 60px rgba(107, 127, 153, 0.2), inset -30px -2px 30px rgba(64, 82, 128, 0.1), inset 30px 2px 30px #fffc;
+}
+
+.inner-rectangle {
+  width: 97%;
+  height: 98.5%;
+  background-color: #f1f3f6;
+  border-radius: 45px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset -30px -2px 30px rgba(64, 82, 128, 0.1), inset 30px 2px 30px #fffc;
+  border: 0.5px solid #ddd;
+}
+
+.speaker {
+  width: 45px;
+  position: absolute;
+  top: 11px;
+  left: 45%;
+  border-bottom: 2px dotted #00000069;
+}
+
+.tiny-rectangles {
+  width: 10px;
+  height: 5px;
+  background-color: #40528038;
+  position: absolute;
+}
+
+.top-left {
+  left: 70px;
+}
+
+.top-right {
+  right: 70px;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 70px;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 70px;
+}
+
+/* styles for text-content */
+.text-content {
+  width: 60vw;
+  text-align: center;
+  padding: 30vh 0;
+}
+
+.text-content h2,
+p {
+  padding: 20px;
+}
+/* styles for the screen of the mobile */
+.status-bar {
+  visibility: hidden;
+  text-align: right;
+  padding: 20px 47px;
+}
+
+.status-icon {
+  width: 17px;
+  margin-left: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 55%;
+  left: 58%;
+  margin: -70px 0 0 -77px;
+  background: #261738;
+  border-radius: 50%;
+  box-shadow: 0px 3px 12px 2px #bbb;
+}
+
+.play-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-out;
+}
+
+.play-triangle {
+  position: absolute;
+  top: 5.5em;
+  left: 4.5em;
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 36px solid #fff;
+  margin: -58px 0 0 -34px;
+}
+
+.stop-square {
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* styles for the content of the page */
+.btn {
+  background-color: #261738;
+  color: #fff;
+  border-radius: 500px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #261738;
+}
+
+.btn span {
+  color: #fff;
+  line-height: 2.5;
+  padding: 10px 20px;
+}
+
+.btn span:hover {
+  color: #261738;
+}
+
+/* styles for music player */
+.music-player {
+  width: 76%;
+  height: 44%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: 4f3c7500;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+  visibility: hidden;
+  box-shadow: inset 0px 0px 26px -9px #4f3c758c;
+}
+
+/* styles for bars */
+.bars-wrapper {
+  position: absolute;
+  bottom: -6px;
+  left: 4em;
+}
+
+.bar {
+  width: 20px;
+  height: 100px;
+  background: #26173826;
+  margin-left: 11px;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+  animation: equalizer 4s 0s infinite;
+  box-shadow: inset 1px 3px 19px 0px #4f3c75;
+}
+
+.first {
+  animation-duration: 1.9s;
+}
+
+.second {
+  animation-duration: 2s;
+}
+
+.third {
+  animation-duration: 1.2s;
+}
+
+.fourth {
+  animation-duration: 2.3s;
+}
+
+.cover-picture {
+  position: absolute;
+  top: 6%;
+  margin: 0 auto;
+  left: 17%;
+  width: 180px;
+  height: 180px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.cover-picture img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 11px 1px #4f3c758c;
+}
+
+.song-title {
+  visibility: hidden;
+  position: absolute;
+  bottom: 24%;
+  left: 12%;
+  font-size: 0.8em;
+}
+
+/* animations to be added when clicking (for js)*/
+.play {
+  animation: play 0.5s forwards cubic-bezier(0.54, -0.05, 0.71, 0.44);
+}
+
+.show-slow {
+  animation: show 0.5s forwards 0.5s ease-in;
+}
+.show-fast {
+  animation: show 0.25s forwards ease-in;
+}
+.fade-shadow {
+  animation: fade-shadow 0.5s forwards ease-in;
+}
+
+/* Keyframes */
+@keyframes play {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    background-color: #ffccb4;
+    transform: scale(0.5) translateY(25em);
+  }
+}
+
+@keyframes fade-shadow {
+  0% {
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes equalizer {
+  0% {
+    height: 90px;
+  }
+
+  10% {
+    height: 30px;
+  }
+
+  15% {
+    height: 20px;
+  }
+
+  20% {
+    height: 30px;
+  }
+
+  25% {
+    height: 40px;
+  }
+
+  30% {
+    height: 10px;
+  }
+
+  35% {
+    height: 40px;
+  }
+
+  40% {
+    height: 60px;
+  }
+
+  45% {
+    height: 20px;
+  }
+
+  50% {
+    height: 40px;
+  }
+
+  55% {
+    height: 70px;
+  }
+
+  60% {
+    height: 30px;
+  }
+
+  65% {
+    height: 10px;
+  }
+
+  70% {
+    height: 30px;
+  }
+
+  75% {
+    height: 50px;
+  }
+
+  80% {
+    height: 100px;
+  }
+
+  85% {
+    height: 70px;
+  }
+
+  90% {
+    height: 80px;
+  }
+
+  95% {
+    height: 70px;
+  }
+
+  100% {
+    height: 60px;
+  }
+}
+
+/* Media queries just for common desktop screen sizes(in case) */
+@media all and (min-width: 1200px) and (max-width: 1365px) {
+  h2 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+@media all and (max-width: 1024px) {
+  .mobile {
+    padding: 3vh;
+  }
+  .text-content {
+    padding: 30vh 6vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #header {
+    position: static;
+    text-align: center;
+    padding: 5%;
+  }
+  #main {
+    height: 100%;
+    width: 100%;
+  }
+  .mobile {
+    width: 100vw;
+    height: 100vh;
+    float: none;
+  }
+  .outer-rectangle {
+    margin: 0 auto;
+    float: none;
+  }
+  .text-content {
+    position: static;
+    width: 100vw;
+    height: 70vh;
+    padding: 20% 0 0;
+  }
+  #footer {
+    text-align: center;
+    padding: 20px;
+  }
+}

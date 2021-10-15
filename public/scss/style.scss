@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap');
+@import "config";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background-color: $light-green;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background: $primary-color;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+h1{
+  font-size: 2.5rem;
+  line-height: 1;
+  color: $secondary-color;
+  margin: 1rem 0;
+}
+
+h2,
+h3 {
+  margin: 1rem 0;
+  color: $secondary-color;
+  line-height: 1.5;
+}
+p {
+  margin: 5px 0;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+ul {
+  padding: 0;
+}
+
+#main-home {
+  #about {
+    @include wrapper;
+    height: calc(100vh - 100px - 4em);
+    .portrait {
+      @include easeOut;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      img {
+        width: 80%;
+      }
+    }
+    .content {
+      @include flex-center;
+      @include content;
+    }
+  }
+  #projects {
+    .layers {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      .layer-item {
+        @include snap-scroll;
+        position: sticky;
+        top: 0rem;
+        transform-origin: center top;
+        transform-origin: center top;
+        overflow: hidden;
+        height: 120vh;
+        padding: 0;
+        .skills {
+          @include wrapper;
+          height: 100vh;
+
+          .picture {
+            width: 40vw;
+            @include flex-center;
+            img {
+              max-width: 100%;
+            }
+            &.backend {
+              margin-top: 15%;
+            }
+            &.design {
+              margin-top: -15%;
+            }
+          }
+          .content {
+            @include flex-center;
+            background: $primary-color;
+            .dev-tools {
+              color: #a2bec1;
+              list-style: none;
+              display: flex;
+              justify-content: flex-start;
+              padding: 0;
+              > div {
+                margin-right: 2rem;
+              }
+              li {
+                padding: 0.5rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    @include snap-scroll;
+    display: grid;
+    grid-template-columns: 1fr 1.55fr;
+    margin: 0;
+
+    .contact-info {
+      margin-left: 6rem;
+      padding: 2rem;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: center;
+      h3 {
+        font-size: 2rem;
+      }
+      ul {
+        padding: 0;
+        .contact-item {
+          list-style: none;
+          margin: 2rem 0;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          line-height: 2;
+          letter-spacing: 1px;
+          &:nth-child(1){
+            margin-top: 0;
+          }
+          img {
+            width: 20px;
+          }
+          span {
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+    .map-image {
+      object-fit: contain;
+      z-index: -2;
+      img {
+        width: 100%;
+      }
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      width: 25vw;
+      justify-content: space-between;
+      .social {
+        align-self: flex-end;
+        &-icon {
+          margin: 0 0.2rem;
+          fill: lighten($secondary-color, 10);
+          &:hover {
+            filter: invert(92%) sepia(58%) saturate(96%) hue-rotate(196deg) brightness(110%) contrast(92%);
+          }
+        }
+      }
+      button {
+        margin-right: 15px;
+
+        align-self: start;
+      }
+    }
+  }
+}
+
+// ** END OF HOME STYLES **
+// PROJECTS PAGE STYLES
+
+#main-projects {
+  margin: 0 6rem;
+
+  section.panel {
+    @include wrapper;
+    @include snap-scroll;
+    height: 100vh;
+
+    .desc {
+      @include flex-center;
+      h2 {
+        margin: 0.5rem 0;
+        span {
+          display: block;
+          font-size: 1.2rem;
+          line-height: 2;
+          margin: 0.5rem 0;
+          color: darken($light-green, 20);
+        }
+      }
+    }
+    .pic {
+      @include flex-center;
+      max-width: 500px;
+      min-width: 300px;
+
+      object-fit: contain;
+      // margin: 0 6rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Case STudy Page Styles
+#main-case {
+  margin: 0 6rem;
+  position: relative;
+  @include snap-scroll;
+
+  h1 {
+    text-align: center;
+  }
+  .panel {
+    @include wrapper;
+    @include snap-scroll;
+    height: 100vh;
+    &:nth-child(2) {
+      height: calc(100vh - 180px);
+    }
+    .pic {
+      width: 400px;
+      margin: 0 auto;
+      @include flex-center;
+      img {
+        width: 100%;
+        filter: $svg-filter;
+      }
+    }
+    .desc {
+      @include flex-center;
+      div.right,
+      div.left {
+        border-top: 1px solid $light-green;
+      }
+      .right {
+        border-right: 1px solid $light-green;
+        padding: 1rem 1rem 0 0;
+      }
+      .left {
+        border-left: 1px solid $light-green;
+        padding: 1rem 0 0 1rem;
+      }
+    }
+  }
+  section.steps {
+    scroll-snap-align: end;
+    height: 200vh;
+    h2 {
+      text-align: center;
+    }
+    .step {
+      @include flex-center;
+      flex-direction: row;
+      margin: 2rem 0;
+      & > div {
+        width: 35px;
+        margin: 0 1rem;
+        filter: $svg-filter;
+      }
+      p {
+        width: 50%;
+      }
+    }
+    .buttons {
+      @include flex-center;
+      flex-flow: row;
+      .btn-view {
+        margin: 1rem;
+      }
+    }
+    .mockup {
+      width: 300px;
+      margin: 2rem auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Classes
+
+.bg-dark {
+  z-index: -1;
+  background: #192833;
+  width: 33vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 6rem;
+}
+.sticky {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+.btn-cv {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background: none;
+  background: $hot-pink;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background: darken($hot-pink, 13);
+    @include easeOut;
+  }
+}
+.btn-view {
+  border: 1px solid $light-green;
+  background: none;
+  color: $light-green;
+  text-align: left;
+  padding: 1rem;
+  width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 1rem 1rem 0 0;
+  text-transform: uppercase;
+  &:hover {
+    @include easeOut;
+    background: $light-green;
+    color: $dark-green;
+    border: 1px solid $light-green;
+  }
+  &:active {
+    background: $hot-pink;
+    color: #fff;
+    border: 1px solid $hot-pink;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #d63086;
+  }
+}
+.btn-view-fill {
+  border: 1px solid $light-green;
+  background: $light-green;
+  color: $dark-green;
+  text-align: left;
+  padding: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  &:hover {
+    @include easeOut;
+    background: none;
+    color: $light-green;
+    border: 1px solid $light-green;
+  }
+  &:active {
+    background: $hot-pink;
+    color: #fff;
+    border: 1px solid $hot-pink;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #d63086;
+  }
+}
+
+@import "mobile";

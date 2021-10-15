@@ -1,0 +1,204 @@
+$primary-color: #203442;
+$secondary-color: #00fff0;
+$light-green: #a2bec1;
+$dark-green: #192833;
+$hot-pink: #d63086;
+$menu-speed: 0.75s;
+$svg-filter: invert(45%) sepia(19%) saturate(545%) hue-rotate(138deg) brightness(90%) contrast(92%);
+
+@mixin wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  margin: 0 6rem;
+}
+@mixin flex-center {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+@mixin content {
+  h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+    height: 100px;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+
+@mixin snap-scroll {
+  scroll-snap-align: start;
+}
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin hamburgerMenu {
+  header {
+    display: none;
+  }
+  // hamburger menu styles
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .toggler {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      z-index: 2;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+      &:checked + .hamburger > div {
+        transform: rotate(135deg);
+        transition: transform 0.2s ease-in;
+      }
+      &:checked + .hamburger > div:before,
+      &:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      &:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+      }
+
+      // TO SHOW MENU
+      &:checked ~ .overlay-menu {
+        visibility: visible;
+      }
+      &:checked ~ .overlay-menu > div {
+        transform: scale(1);
+        transition-duration: $menu-speed;
+      }
+      &:checked ~ .overlay-menu > div > div {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+    }
+    .hamburger {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      padding: 1rem;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > div {
+        @include easeOut;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          width: 100%;
+          height: 2px;
+          background: inherit;
+        }
+        &:after {
+          top: 10px;
+        }
+      }
+    }
+    .overlay-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* going to be un-commented */
+      visibility: hidden;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > div {
+        background: rgba($primary-color, 0.9);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* going to be un-commented */
+        transform: scale(0);
+        transition: all 0.4s ease;
+        & > div {
+          max-width: 90vw;
+          max-height: 100vh;
+          text-align: center;
+          /* going to be un-commented */
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          ul {
+            li {
+              list-style: none;
+              text-transform: uppercase;
+              font-weight: 200;
+              font-size: 1.2rem;
+              color: #fff;
+              margin: 2rem auto;
+              padding: 0.4rem;
+              width: fit-content;
+              text-align: center;
+              height: 45px;
+              &:last-child {
+                &:hover {
+                  border: none;
+                }
+              }
+              &:hover {
+                border-bottom: 1px solid #fff;
+              }
+              a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.4s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query Mixins
+
+// @mixin mediaSm {
+//   @media screen and (max-width: 500px) {
+//     @content;
+//   }
+// }
+@mixin mediaMd {
+  @media screen and (max-width: 999px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 1000px) and (max-width: 1365px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>@ViewBag.Title</title>
+  <!-- @Styles.Render("~/Content/css")
+  @Styles.Render("~/bundles/modernizr") -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar navbar-light container">
+      <a class="navbar-brand"><img src="images/logo.png" alt="Logo Image, Link to the home page"></a>
+      <form class="form-inline">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+          </div>
+          <input type="text" class="form-control mr-2" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+          <button class="d-none" type="submit" name="submit"></button>
+        </div>
+        <button class="btn btn-primary" type="button" name="button">Donate Now!</button>
+      </form>
+    </nav>
+    <div class="notification bg-light container-fluid text-center py-2">
+      ATTENTION: COVID-19 ASSESSMENT CENTRES OPEN. FILL OUT THE ONLINE FORM OR CALL 1-888-425-0321 or 705-356-2265 ext. 2661 Blind River Centre or ext. 2662 Thessalon Centre.
+    </div>
+
+    <div class="main-menu container">
+
+      <div class="nav nav-pills nav-fill">
+        <a class="nav-item nav-link  href=" #">HOME</a>
+        <a class="nav-item nav-link" href="#">ABOUT</a>
+        <a class="nav-item nav-link" href="#">PATIENTS</a>
+        <a class="nav-item nav-link" href="#">SERVICES</a>
+        <a class="nav-item nav-link" href="#">CAREERS</a>
+        <a class="nav-item nav-link" href="#">CONTACT</a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <main>
+    <!-- Slider -->
+    <section class="">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/banner.jpg" class="img-fluid d-block w-100" alt="Slider Image">
+            <div class="container">
+              <div class="banner-caption">
+                <img src="images/Logo_Light.png" alt="">
+                <h3 class="py-3 text-light">We need your help!</h3>
+                <p>Donate today to the COVID-19 Relief Fund to help meet the emergency needs of your hospital.</p>
+                <button class="btn btn-secondary-outline btn-cta" type="button" name="button">Sign In</button>
+                <button class="btn btn-secondary btn-cta" type="button" name="button">Donate</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- Services -->
+    <section class="services container py-5">
+      <h2 class="text-uppercase text-center py-5">Our Services</h2>
+      <div class="row">
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Emergency</h5>
+            <img class="" src="images/emergency.jpg" alt="Emergency">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Responsibilities</h5>
+            <img class="" src="images/responsibilities.jpg" alt="Responsibilities">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Abuse report</h5>
+            <img class="" src="images/abuse-report.jpg" alt="Abuse report">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Hospital Stay</h5>
+            <img class="" src="images/hospital-stay.jpg" alt="Hospital Stay">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Tips & advide</h5>
+            <img class="" src="images/tips-advice.jpg" alt="Tips & advide">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="service py-5 mr-3 text-center">
+            <h5 class="pb-3 text-uppercase">Parking</h5>
+            <img class="" src="images/parking.jpg" alt="Parking">
+            <p class="py-3">has provided care for the residents of Elliot Lake and the North Shore since 1958.</p>
+            <button class="btn btn-readmore" type="button" name="button">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- News Fees -->
+    <section class="container-fluid bg-light py-5">
+      <h2 class="text-uppercase text-center py-5">News Feed</h2>
+      <div class="container">
+        <div class="row">
+          <div class="news col text-center">
+            <a href="#">
+              <h4 class="pb-3">Ontario reports 31 more deaths due to COVID-19, case count rises to 6,648</h4>
+            </a>
+            <img src="https://www.cp24.com/polopoly_fs/1.4886805.1586288417!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg" alt="">
+            <p class="py-4">Ontario health officials reported 411 new COVID-19 infections on Saturday, along with 31 more deaths, taking the province’s total case count including recoveries to 6,648.</p>
+          </div>
+          <div class="news col text-center">
+            <a href="#">
+              <h4 class="pb-3">Ford extends Ontario's emergency COVID-19 measures to April 23</h4>
+            </a>
+            <img src="https://www.cp24.com/polopoly_fs/1.4887749.1586344660!/httpImage/image.jpg_gen/derivatives/landscape_960/image.jpg" alt="">
+            <p class="py-4">The Ford government is extending Ontario’s emergency declaration until at least April 23, and adding several new measures to ban camping on Crown land and make it easier for hospitals to surge capacity.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- @RenderBody() -->
+  </main>
+  <footer>
+    <div class="top-footer container py-5">
+      <div class="row">
+        <div class="col-md-3">
+          <img class="py-5" src="images/logo.png" alt="Logo Image">
+          <p>The North Shore Health Network receives funding from the North East Local Health Integration Network.</p>
+          <p> The opinions expressed in this publication do not necessarily represent the views of the North East Local Health Integration Network.</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="py-5">COVID-19 Information</h5>
+          <div class="">
+            <a href="#"> <i class="fa fa-circle-thin"></i> How to isolate yourself at home when you have COVID-19</a>
+          </div>
+          <div class="py-3">
+            <a href="#"> <i class="fa fa-circle-thin"></i> COVID-19 ASSESSMENT Form</a>
+          </div>
+          <div class="py-3">
+            <a href="#"> <i class="fa fa-circle-thin"></i> General Questions</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="py-5">Other Links</h5>
+          <div class="py-3">
+            <a href="#">Terms of Use</a>
+
+          </div>
+          <div class="py-3">
+
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="py-5">Contact Us</h5>
+          <p><i class="fa fa-phone"></i> <strong>COVID Assessment:</strong><br> 1-888-425-0321 <br>
+            705-356-2265 ext. 2661</p>
+          <p><i class="fa fa-phone"></i> <strong>Phone:</strong> 705-356-2265</p>
+          <p><i class="fa fa-map-marker-alt"></i> <strong>Address: Blind River Site</strong><br>
+            525 Causley St., P.O. Box 970, Blind River, ON P0R 1B0</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer container-fluid bg-light">
+
+      <div class="container clearfix py-3">
+
+        <div class="float-left">
+          &copy; Copyrights, All Rights Reserved. @DateTime.Now.Year
+        </div>
+
+        <div class="float-right">
+          705-356-2265 | <a href="#">Terms of Use</a> | <a href='#'>Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
